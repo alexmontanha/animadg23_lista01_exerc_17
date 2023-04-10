@@ -25,11 +25,16 @@ public class App {
 
         // -> Galões 3.6 litros = R$ 25,00
         double precoGalao = 25.00;
+        double volumeGalao = 3.6;
 
         // Calcular qts latas de tinta
         double quantidadeLatas = metragem / (volumeLataLitros * rendimentoLitros);
         // Calcular o valor total em latas
         double valorTotalLatas = quantidadeLatas * precoLata;
+
+        //Calcular qts galões de tinta
+        double quantidadeGaloes = metragem / (volumeGalao * rendimentoLitros);
+        double valorTotalGaloes = quantidadeGaloes * precoGalao;
 
         // Calcular qts galões de 3,6 litros
         // Calcular a melhor quantidade de latas e galões, considerando quantides de latas e galões cheios e 10% de folga. Arredondando para cima
@@ -38,6 +43,8 @@ public class App {
         System.out.printf("A metragem a ser pintada por %s é de %f metros quadrados", nome, metragem);
         System.out.println("");
         System.out.printf("A quantidade de latas é %f e o valor total em latas é %f", quantidadeLatas, valorTotalLatas);
+        System.out.println("");
+        System.out.printf("A quantidade de galões é %f e o valor total em galões é %f", quantidadeGaloes, valorTotalGaloes);
     }
 
 }
