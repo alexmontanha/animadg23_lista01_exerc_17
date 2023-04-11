@@ -38,6 +38,13 @@ public class App {
 
         //Quantidade a pintar para mistura
         double metragemMistura = metragem * 1.1;
+        double quantidadeLatasMistura = metragemMistura / (volumeLataLitros * rendimentoLitros);
+        double quantidadeLatasMisturaArredondada = Math.ceil(metragemMistura / (volumeLataLitros * rendimentoLitros));
+        double quantidadeDesperdicioLata = quantidadeLatasMisturaArredondada - quantidadeLatasMistura;
+        double quatidadeLitrosAConverterEmGaloes = (1 - quantidadeDesperdicioLata) * volumeLataLitros;
+        double quantidadeEmGaloesArredondada = Math.ceil(quatidadeLitrosAConverterEmGaloes/volumeGalao);
+        double quantidadeEmLataFinal = Math.floor(quantidadeLatasMistura);
+
 
         // Calcular qts galões de 3,6 litros
         // Calcular a melhor quantidade de latas e galões, considerando quantides de latas e galões cheios e 10% de folga. Arredondando para cima
@@ -50,6 +57,18 @@ public class App {
         System.out.printf("A quantidade de galões é %f e o valor total em galões é %f", quantidadeGaloes, valorTotalGaloes);
         System.out.println("");
         System.out.printf("A metragem para mistura é igual a %f", metragemMistura);
+        System.out.println("");
+        System.out.printf("A quantidade de latas para mistura é igual a %f", quantidadeLatasMistura);
+        System.out.println("");
+        System.out.printf("A quantidade de latas para mistura arredondada é igual a %f", quantidadeLatasMisturaArredondada);
+        System.out.println("");
+        System.out.printf("A quantidade desperdício na lata %f", quantidadeDesperdicioLata);
+        System.out.println("");
+        System.out.printf("A quantidade em litros a ser usada em galões é %f", quatidadeLitrosAConverterEmGaloes);
+        System.out.println("");
+        System.out.printf("A quantidade arredondada em galões é %f", quantidadeEmGaloesArredondada);
+        System.out.println("");
+        System.out.printf("A quantidade final em latas é %f e em galões é %f", quantidadeEmLataFinal, quantidadeEmGaloesArredondada);
     }
 
 }
