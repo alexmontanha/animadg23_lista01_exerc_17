@@ -36,6 +36,9 @@ public class App {
         double quantidadeGaloes = metragem / (volumeGalao * rendimentoLitros);
         double valorTotalGaloes = quantidadeGaloes * precoGalao;
 
+        //Quantidade a pintar para mistura
+        double metragemMistura = metragem * 1.1;
+
         // Calcular qts galões de 3,6 litros
         // Calcular a melhor quantidade de latas e galões, considerando quantides de latas e galões cheios e 10% de folga. Arredondando para cima
         //Saídas
@@ -45,6 +48,8 @@ public class App {
         System.out.printf("A quantidade de latas é %f e o valor total em latas é %f", quantidadeLatas, valorTotalLatas);
         System.out.println("");
         System.out.printf("A quantidade de galões é %f e o valor total em galões é %f", quantidadeGaloes, valorTotalGaloes);
+        System.out.println("");
+        System.out.printf("A metragem para mistura é igual a %f", metragemMistura);
     }
 
 }
